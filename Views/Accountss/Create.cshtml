@@ -1,0 +1,24 @@
+﻿@model services;
+
+
+<h3>Create New service</h3>
+<br />
+
+<form method="post" asp-action="Create">
+
+    <div class="form-group">
+        <label class="form-label"> service Name</label>
+        <input asp-for="ser_name" class="form-control" />
+    </div>
+
+    <br /><br />
+    <div class="form-group">
+        <label class="form-label"> service price</label>
+        <input asp-for="price" class="form-control" />
+    </div>
+
+    <br /><br />
+    <a class="btn btn-danger" asp-action="Index">Cancel</a>
+    <button type="submit" class="btn btn-primary">Save</button>
+
+</form>

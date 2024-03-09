@@ -1,0 +1,25 @@
+﻿@model services;
+
+<h3>Confirm: do you want to delete?</h3>
+<br />
+try{
+<form method="post" asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label class="form-label"> service Name</label>
+        <input asp-for="ser_name" class="form-control" disabled />
+    </div>
+
+    <br /><br />
+    <div class="form-group">
+        <label class="form-label"> service price</label>
+        <input asp-for="price" class="form-control" disabled />
+    </div>
+
+    <br /><br />
+
+    <a class="btn btn-primary" asp-action="Index">Cancel</a>
+    <button type="submit" class="btn btn-danger">Yes, Delete !</button>
+
+</form>
+}catch(exception e);
